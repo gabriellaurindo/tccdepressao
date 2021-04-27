@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-iedge"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Pontano+Sans&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;700&display=swap" rel="stylesheet">  
+    <link rel="shortcut icon" href="../../public/img/logopreto.png" />   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&family=Sansita+Swashed:wght@300;500&display=swap" rel="stylesheet">
+    <title>Depressão</title>
+</head>
+<body>
+    <nav class="item-body"> 
+        <ul class="nav flex-column">
+            <li class="nav-item" ><img class="user" src="../../public/img/usertemplate.png"></li>
+            <li><p class="user-name nav-item"><%= dados.nome %></p></li>
+            <hr>   
+            <li class="nav-item">
+            <a class="nav-link active nav-desative" href="/admin">Inicial</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link nav-active" href="/criar-relato-adm">Criar Relato</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link nav-desative" href="/adminAprovar">Aprovar</a>    
+            </li>
+            <li class="nav-item">
+            <a class="nav-link nav-desative" href="/admins">Comunidade</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link nav-desative" href="/perfiladm" tabindex="-1" aria-disabled="true">Seu Perfil</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link nav-desative" href="/logout" tabindex="-1" aria-disabled="true">Sair</a>
+          </li>
+        </ul>
+    </nav>
+    <section class="geral">
+    <section class="explain">
+        <div class="explain-item">
+            <h2>Crie um relato</h2>
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Nesta página você pode criar um relato ou falar algo que você queira sobre suas experiências com este assunto, seja vivido diretamente ou indiretamente (desde que nomes dos envolvidos não sejam ditos, se for você mesmo não tem problema).</p>
+        </div>    
+    </section>    
+    <section class='formulario item-body center'>
+        <div class="div-form">
+            <form class="criar-relato" method="POST" action="/criar-relato-adm">
+                <p class="item-relato">Titúlo:</p>
+                <input class="item-relato" name="titulo" placeholder="Titúlo" minlength="30" required>
+                <p class="item-relato">Imagem:</p>
+                <input class="item-relato" name="link" placeholder="exemplo: https://google.com/dark.jpg">
+                <p class="item-relato">Conteúdo:</p>
+                <textarea class="item-relato text-area" name="conteudo" minlength="150" placeholder="Conteúdo" required></textarea>
+                <button class="item-relato" type = "submit" name="btcreatepost">Create</button>
+            </form>
+        </div>
+    </section>    
+    </section>
+    <style>
+        body{
+            display:flex;
+            flex-direction: row;
+        }
+        .geral{
+            display:flex;
+            flex-direction: column;
+        }
+        nav p{
+            font-family: 'Sansita Swashed', cursive;
+            color: white;
+            font-size: 20px;
+            
+        }
+        nav{
+            height: 100%;
+            padding: 10px;
+            background-color: black;
+            border-radius: 0px 30px 30px 0px;
+            float: left;
+        }
+        .nav-item{
+            padding: 10px 0px 10px 0px;
+            align-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .nav-item a {
+            color: white;
+            font-family: 'Raleway', sans-serif;
+            border-radius: 30px;
+            
+        }
+        .user{
+            height: 100px;
+            width: auto;
+            
+        }
+        hr{
+            width: 70%;
+            height: 1px;
+            padding: 0px;
+            background-color: white;
+        }
+        .nav-active{
+            background-color: purple;
+            width: 100%;
+            border-radius: 30px;
+        }
+        .nav-desative:hover{
+            background-color: white;
+            color: black;
+            font-weight: 200;
+            transition: 0.4s;
+        }
+        .criar-relato{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            
+        }
+        .explain{
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            padding-top: 15px;
+            text-align: justify;
+        }
+        .explain-item{
+            display:flex;
+            flex-direction: column;
+            width: 50%;
+        }
+        .item-relato{
+            margin: 10px;
+        }
+        button{
+          text-shadow: none;
+          border: none;
+          color: white;
+          padding: 16px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          transition-duration: 0.4s;
+          cursor: pointer;
+          top: 72%;
+          left: 50%;
+          background-color: black; 
+        }
+
+        button:hover {
+          background-color: purple;
+          font-size: 18px;
+          border-radius: 6px;
+        }
+        .text-area{
+            height: 200px;
+        }
+        .div-form{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a563a889e2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>

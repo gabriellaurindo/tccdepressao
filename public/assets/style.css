@@ -1,0 +1,559 @@
+
+body{
+    display: block;
+    margin:0px;
+    padding: 0px;
+}
+
+header{
+    width: auto;
+    background-image: url('../img/dark.jpg');
+    background-color: #cccccc;
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+header h1, header p, button {
+  width: auto;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-weight: 600;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 0.1em 0.1em 0.2em black;
+  font-family: Domine, serif;
+}
+
+button{
+    font-weight: 100;
+}
+
+header p{
+  font-weight: 100;
+  top: 60%;
+  left: 50%;
+  padding: 10px;
+  font-size: 18px;
+  font-family: Montserrat, sans-serif;
+  
+}
+
+header button{
+  text-shadow: none;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  top: 72%;
+  left: 50%;
+  background-color: black; 
+  border: 2px solid purple;
+}
+
+header button:hover {
+  background-color: purple;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+.logo{
+    height: 40px;
+    top: 1%;
+    position: fixed;
+    opacity: 0.8;
+}
+
+.logo:hover{
+    opacity: 1;
+}
+
+.menu{
+   display: flex;
+   flex-direction: row;    
+   justify-content: flex-end;
+   padding: 0px;
+   margin: 0;
+   position: fixed;
+   top: 0%;
+   right: 0%;
+}
+
+.menu li{
+  list-style: none;
+  padding: 10px;
+}
+
+.menu li a{
+    text-decoration: none;
+    color:gray;
+    padding: 10px;
+    font-size: 15px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+}
+
+.menu li a:hover {
+    color:rgba(255,255,0, 0.02);
+    text-shadow: 3px 3px darkgray;
+}
+
+.resumo{
+    width: auto;
+    display: flex;
+    flex-direction:column;
+    padding: 6% 0px 6% 0px;
+    margin: 380px 0px 0px 0px;
+    text-align:justify; 
+    box-shadow:0px 0px 20px rgba(29, 140, 231, 0.45);
+    font-weight: 100;
+    font-family: Montserrat, sans-serif;
+    background-color: black;
+    color: white;
+    align-items: center;
+}
+
+.resumo div{
+    width: 30%;
+    margin:0px 0px 0px 0px;
+}
+
+.resumo cite a{
+     color:#FF6BFB;
+     text-decoration: none;
+}
+
+.resumo div cite a:hover{
+    font-size: 17px;
+    color: mediumpurple;
+}
+
+.relato{
+    font-size: 20px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    padding: 10% 0px 10% 10%;
+    text-align:justify; 
+    font-family: Montserrat, sans-serif;
+    justify-content: space-between;
+    font-weight: 100;
+}
+.relato .texto{
+    margin-right: 10%;
+	width: 200px;
+}
+
+.imgtexto{
+    padding: 0px 2% 10% 0px;
+}
+
+.relato img{
+    width: 350px;
+    height:525px;
+    box-shadow: -35px 32px 1px rgba(0, 0, 1, 0.4);
+}
+
+.relato cite{
+    color: purple;
+    font-weight: 500;
+}
+
+.player {
+    width: 100%;
+    padding: 5% 0px 5% 0px;
+    margin:0px 0px 0px 0px;
+    display: flex;
+    background-color:black;
+    color: white;
+    flex-direction: column;
+    box-shadow:0px 0px 20px rgba(29, 140, 231, 0.45);
+    align-items: center;
+    justify-content:center;
+    font-size: 22px;
+    font-family: Domine, sans-serif;
+    text-align: center;
+    font-weight:800; 
+}
+.video{
+    width: auto;
+}
+
+.video embed{
+    width: 720px;
+    height: 480px;
+}
+
+.titulovideo{
+    padding: 0px 0px 20px 0px;
+}
+.titulo{
+    font-size: 22px;
+    font-family: Domine, sans-serif;
+    font-weight: 800;
+}
+
+.conteudo{
+    font-size: 20px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    padding: 10% 0px 10% 10%;
+    text-align:justify; 
+    font-family: Montserrat, sans-serif;
+    justify-content: space-between;
+    font-weight: 100;
+}
+
+.divconteudo{
+    width: 400px;
+    margin-right: 10%;
+}
+
+.imgconteudo{
+    margin-right: 2%;
+    padding: 2% 0% 10% 0px;
+}
+
+.imgconteudo img{
+    width: 350px;
+    height: 525px;
+    box-shadow: -35px 32px 1px rgba(0, 0, 1, 0.4);
+}
+
+.conteudo div p mark{
+    color: purple;
+    background-color: #FFCCFF;
+}
+
+footer{
+    width: auto;
+    background-color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+footer ul{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 0px;
+}
+
+footer a, footer p{
+    background-color: black;
+    color: gray;
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+}
+
+footer li{
+    padding:10px 10px 20px 10px;
+    list-style: none;
+}
+
+footer li a{
+    border-style: solid;
+    border-color: white;
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+footer a:hover{
+    font-size: 19px;
+    color: white;
+}
+
+footer p:hover{
+    color: white;
+}
+
+.citacoes{
+    text-decoration: none;
+    font-style: italic;
+}
+
+.citacoes:hover{
+    font-size: 21px;
+}
+
+.quemsomos{
+  background-image: url('../img/quemsomos.jpg');
+ 
+}
+
+.quemsomos p, .quemsomos h1{
+     text-shadow: 0.1em 0.1em 1em black;
+}
+
+.btquemsomos{
+  background-color:rgba(255,255,0, 0.02);  
+}
+
+.faleconosco header{
+   background-image: url('../img/faleconosco.jpg'); 
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    justify-content:space-between;
+    align-items: flex-start;
+    font-family: Montserrat, sans-serif;
+}
+
+.down{
+    background-color:white;
+    text-align: center;
+    padding: 300px 0px 200px 0px;
+    flex-wrap: nowrap;
+}
+.Item{
+    padding: 10px;
+    width: 50%;
+    height: 700px;
+    background-color: black;
+    color:white;
+}
+
+.down_item_meio{
+    background-color: purple;
+    height: auto;
+}
+
+.down_item{
+   height: auto;
+   padding: 0px;
+   color:black;
+   background-color: white;  
+       
+}
+.down p{
+    background-color: white;
+    padding: 10px;
+    height: auto;
+    width: auto;
+}
+
+.container p, .container h2{
+    padding: 10px;
+}
+
+.down_item_meio p{
+    background-color: purple;
+    width: 100%;
+    padding: 0;
+}
+
+.white{
+    background-color: white;
+    color: black;
+}
+
+@media screen and (max-width: 964px) {
+    .divconteudo{
+        width: 300px;
+        margin-right: 5%;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .resumo div{
+      width: 40%;  
+    }
+}
+
+@media screen and (max-width: 777px){
+    .divconteudo{
+        width: 240px;
+    }
+    .video embed{
+        width: 320px;
+        height: 190px;
+    }
+}
+@media screen and (max-width:711px){
+    
+    .relato{
+        justify-content:center;
+        padding: 20% 0% 10% 10%;
+    }
+    
+    .conteudo{
+        justify-content:center;
+        padding: 20% 0% 10% 0%;
+    }
+    
+    .divconteudo{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 666px) {
+    header p{
+      top: 65%;    
+    }
+    header{
+         background-image: url('../img/darkmobile.jpg');
+    }
+    header button{
+      top: 78%;  
+    }
+    .resumo div{
+      width: 60%;  
+    }
+    .btquemsomos{
+        top: 75%
+    }
+    .quemsomos p{
+      top: 60%;    
+    }
+    .relato{
+        width: 100%;
+        height: 100%;
+        padding: 30% 0% 10% 0%;
+      
+    }
+    .relato .texto{
+        margin-right: 0;
+    }
+    .imgtexto{
+        padding: 0px 0px 25px 0px;   
+    }
+    .divconteudo{
+         margin-right: 0;
+    }
+    .conteudo{
+        width: 100%;
+        height: 100%;
+        padding: 30% 0% 10% 0%;
+    }
+    .container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .Item{
+        padding: 20px 0px 20px 0px;
+        width: 100%;
+        height: 100%;
+    }
+    .down{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .menu{
+        flex-direction: column;
+    }
+    .menu li{
+       display: flex;
+        flex-direction: column;
+        padding: 2px;
+        margin: 0;
+        align-items: flex-end;
+    }
+    .imgconteudo{
+        margin-right: 0%;
+    }
+    .quemsomos p{
+        top:65%
+    }
+    .btquemsomos{
+        top: 81%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .menu{
+        flex-direction: column;
+    }
+    .menu li{
+       display: flex;
+        flex-direction: column;
+        padding: 2px;
+        margin: 0;
+        align-items: flex-end;
+    }
+}
+@media screen and (max-width: 425px) {
+    header p{
+      top: 67%;    
+    }
+    header button{
+      top: 79%;  
+    }
+    .resumo div{
+      width: 60%;  
+    }
+    .imgconteudo img{
+        box-shadow: none;
+    }
+    .relato img{
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    header p{
+      top: 69%;    
+    }
+    header button{
+      top: 84%;  
+    }
+    .resumo div{
+      width: 60%;  
+    }
+    .video embed{
+        width: 200px;
+        height: 117px;
+    }
+    .relato img{
+    width: 220px;
+    height:320px;
+    }
+    .imgconteudo img{
+    width: 220px;
+    height:320px;
+    }
+    .quemsomos p{
+        top:70%
+    }
+    .btquemsomos{
+        top: 90%;
+    }
+}
+@media screen and (max-width: 220px) {
+    header p{
+      top: 72%;    
+    }
+    header button{
+      top: 89%;  
+    }
+}
+
+.logo:active{
+    
+    
+}
